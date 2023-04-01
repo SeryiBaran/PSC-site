@@ -34,7 +34,7 @@ export const messages = {
     },
     download: {
       heading: 'Скачать',
-      firefox: 'Магазин Firefox',
+      firefox: 'Firefox Addons',
       source: 'Исходный код',
     },
     footer: {
@@ -76,7 +76,7 @@ export const messages = {
     },
     download: {
       heading: 'Download',
-      firefox: 'Firefox Shop',
+      firefox: 'Firefox Addons',
       source: 'Source code',
     },
     footer: {
