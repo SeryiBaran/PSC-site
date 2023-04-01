@@ -7,7 +7,7 @@ const showGoodSearchSecs = 60
 
 const resultsQuantity = 3
 
-const buttonsShowed = ref(true)
+const buttonsShowed = ref(false)
 const isGoodSearch = ref(false)
 const goodSearchNumber = ref<number>()
 
@@ -27,14 +27,14 @@ function selectSearch(searchNumber: number) {
 <template>
   <BrowserMockup class="m-auto w-full">
     <div class="h-full text-start" :class="{ goodSearch: isGoodSearch }">
-      <div class="bg-gray/10 border-b border-gray/20 flex items-center gap-4 p-2">
+      <div class="bg-gray/10 border-b border-gray/20 flex flex-col md:flex-row items-center gap-4 p-2">
         <div class="text-red flex items-center gap-2 logo">
           <div class="text-10" :class="{ 'i-mdi-lock': isGoodSearch, 'i-mdi-lock-open-remove': !isGoodSearch }" />
           <p>
             {{ isGoodSearch ? `${$t('demo.searches.search')} ` + `№${goodSearchNumber}` : $t('demo.searches.badSearch') }}
           </p>
         </div>
-        <input class="input max-w-md w-full" type="text" :value="$t('demo.query')">
+        <input class="input w-full sm:max-w-md" type="text" :value="$t('demo.query')">
       </div>
       <div class="p-2 flex gap-4 flex-col sm:flex-row">
         <ul class="relative max-w-full sm:max-w-md flex flex-col gap-2 grow">
@@ -77,7 +77,7 @@ function selectSearch(searchNumber: number) {
       >
         <div
           v-if="buttonsShowed"
-          class="text-gray-800 shadow w-max h-min flex flex-col gap-1"
+          class="text-gray-800 shadow max-w-80vw h-min flex flex-col gap-1"
         >
           <button v-for="searchNumber in [1, 2, 3]" :key="searchNumber" class="btn" @click="selectSearch(searchNumber)">
             {{ t('demo.searches.search') }} №{{ searchNumber }}
