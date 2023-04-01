@@ -53,10 +53,10 @@ const localeStore = useLocalStorage('locale', i18n.locale)
       <h2>{{ $t('download.heading') }}</h2>
 
       <div class="flex flex-col gap-2">
-        <a href="https://addons.mozilla.org/firefox/addon/privacy-companion/" class="btn btn-medium">
+        <a href="https://addons.mozilla.org/firefox/addon/privacy-companion/" target="_blank" class="btn btn-medium">
           <span class="i-mdi-firefox" />{{ $t('download.firefox') }}
         </a>
-        <a href="https://github.com/Erghel/Privacy-Search-Companion" class="btn btn-medium">
+        <a href="https://github.com/Erghel/Privacy-Search-Companion" target="_blank" class="btn btn-medium">
           <span class="i-mdi-github" />{{ $t('download.source') }}
         </a>
       </div>
