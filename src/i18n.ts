@@ -1,7 +1,7 @@
 export const messages = {
   ru: {
     about: {
-      whatIsIt: 'Privacy Search Companion - просто браузерное расширение, которое позволит направить ваш запрос в один из поисковиков, которые ориентированы на приватность и конфиденциальность.',
+      whatIsIt: 'Privacy Search Companion - простое браузерное расширение, которое позволит направить ваш запрос в один из поисковиков, которые ориентированы на приватность и конфиденциальность.',
       aboutAdsInIt: 'Также, при запросе в представленные поисковики вам будет выдавать только то, что вы ищите, без рекламы и акций. Разработчики данных систем не стремятся заработать на вас и ваших запросах.',
       allIsSimple: 'Все просто: Вопрос -> Ответ',
     },
@@ -43,7 +43,7 @@ export const messages = {
   },
   en: {
     about: {
-      whatIsIt: 'Privacy Search Companion - just a browser extension that will allow you to direct your request to one of the search engines that are focused on privacy and confidentiality.',
+      whatIsIt: 'Privacy Search Companion - simple browser extension that will allow you to direct your request to one of the search engines that are focused on privacy and confidentiality.',
       aboutAdsInIt: 'Also, when you query in the presented search engines, you will be given only what you are search, without advertising and promotions. The developers of these systems do not seek to make money on you and your requests.',
       allIsSimple: 'It\'s simple: Question -> Answer',
     },
