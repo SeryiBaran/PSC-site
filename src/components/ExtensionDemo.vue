@@ -7,9 +7,9 @@ const showGoodSearchSecs = 60
 
 const resultsQuantity = 3
 
-const buttonsShowed = ref(false)
+const buttonsShowed = ref(true)
 const isGoodSearch = ref(false)
-const goodSearchNumber = ref<number>()
+const goodSearchNumber = ref<number>(1)
 
 const searchResults = computed(() => Array.from({ length: resultsQuantity }, (_, i) => i + 1).map(number =>
   ({ title: `${t('demo.result.title')} ${number}`, description: `${t('demo.result.description')} ${number}` })))
