@@ -60,7 +60,7 @@ function selectSearch(searchNumber: number) {
           </TransitionGroup>
         </ul>
         <div class="relative max-h-60 grow max-w-full sm:max-w-64">
-          <TransitionGroup name="resultsList">
+          <Transition name="resultsList">
             <div v-if="!isGoodSearch" class="bg-red/20 p-2 w-full h-full rounded flex flex-col gap-y-2 result">
               <p class="m-0">
                 {{ $t('demo.ads.bigAd.title') }}
@@ -69,7 +69,7 @@ function selectSearch(searchNumber: number) {
                 {{ $t('demo.ads.bigAd.description') }}
               </p>
             </div>
-          </TransitionGroup>
+          </Transition>
         </div>
       </div>
       <div
@@ -100,22 +100,12 @@ function selectSearch(searchNumber: number) {
   @apply text-green-5;
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  gap: 1rem;
-}
-
 .result {
-  transition: all 0.2s ease;
+  @apply transition-all transition-300;
 }
 
-.resultsList-enter-from,
 .resultsList-leave-to {
-  opacity: 0;
-  transform: translateY(-30px);
+  @apply animate-fade-out-up animate-duration-300;
 }
 
 .resultsList-leave-active {
