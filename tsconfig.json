@@ -14,19 +14,10 @@
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "vite/client",
-      "unplugin-vue-macros/macros-global"
-    ],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "vueCompilerOptions": {
-    "plugins": [
-      "@vue-macros/volar/define-model",
-      "@vue-macros/volar/define-slots"
-    ]
-  },
+  "include": ["env.d.ts"],
   "exclude": ["dist", "node_modules", "*.cjs"]
 }
