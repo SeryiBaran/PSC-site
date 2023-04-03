@@ -6,7 +6,7 @@
 
 ## Технологии:
 
-- [UnoCSS](https://github.com/unocss/unocss)
+- [TailwindCSS](https://tailwindcss.com/)
 - [Vue.js](https://vuejs.org/)
 - [Vue-I18n](https://vue-i18n.intlify.dev/)
 - [Typescript](https://www.typescriptlang.org/)
