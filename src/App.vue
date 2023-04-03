@@ -1,6 +1,7 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useLocalStorage } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
+import ExtensionDemo from './components/ExtensionDemo.vue'
 
 const i18n = useI18n()
 
