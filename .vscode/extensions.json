@@ -1,9 +1,6 @@
 {
   "recommendations": [
-    "antfu.vite",
-    "antfu.iconify",
     "bradlc.vscode-tailwindcss",
-    "antfu.goto-alias",
     "vue.volar",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig"
