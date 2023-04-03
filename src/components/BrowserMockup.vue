@@ -13,6 +13,6 @@
 
 <style scoped>
 .mockup-btn {
-  @apply h-3 w-3 rounded-full;
+  @apply h-3 text-black rounded-full w-3 shadow;
 }
 </style>

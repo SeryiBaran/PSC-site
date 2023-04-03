@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import webfontDownload from 'vite-plugin-webfont-dl'
 
 export default defineConfig({
   base: './',
@@ -34,7 +33,5 @@ export default defineConfig({
     Components({
       dts: true,
     }),
-
-    webfontDownload(),
   ],
 })

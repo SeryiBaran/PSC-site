@@ -11,6 +11,7 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.14",
     "@iconify/json": "^2.2.43",
     "@vueuse/core": "^9.13.0",
     "tailwindcss-animated": "^1.0.0",
@@ -39,7 +40,6 @@
     "unplugin-vue-components": "^0.24.1",
     "unplugin-vue-macros": "^1.11.2",
     "vite": "^4.2.1",
-    "vite-plugin-webfont-dl": "^3.6.5",
     "vue-tsc": "^1.2.0"
   },
   "simple-git-hooks": {
