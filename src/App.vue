@@ -7,8 +7,8 @@ const localeStore = useLocalStorage('locale', i18n.locale)
 </script>
 
 <template>
-  <div class="font-sans max-w-5xl mx-auto p-4 text-center flex flex-col gap-4">
-    <header class="flex items-center justify-center flex-wrap gap-4 my-16">
+  <div class="mx-auto flex max-w-5xl flex-col gap-4 p-4 text-center font-sans">
+    <header class="my-16 flex flex-wrap items-center justify-center gap-4">
       <img src="@/assets/logo.png" alt="logo" class="h-20 w-20">
       <h1>
         Privacy Search Companion
@@ -20,7 +20,7 @@ const localeStore = useLocalStorage('locale', i18n.locale)
         </option>
       </select>
     </header>
-    <main class="flex flex-col gap-4 items-center">
+    <main class="flex flex-col items-center gap-4">
       <section>
         <p>
           {{ $t("about.whatIsIt") }}

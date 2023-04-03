@@ -27,8 +27,8 @@ function selectSearch(searchNumber: number) {
 <template>
   <BrowserMockup class="m-auto w-full">
     <div class="h-full text-start" :class="{ goodSearch: isGoodSearch }">
-      <div class="bg-gray-500/10 border-b border-gray-500/20 flex flex-col md:flex-row items-center gap-4 p-2">
-        <div class="text-red-500 flex items-center gap-2 logo">
+      <div class="flex flex-col items-center gap-4 border-b border-gray-500/20 bg-gray-500/10 p-2 md:flex-row">
+        <div class="logo flex items-center gap-2 text-red-500">
           <div class="text-5xl" :class="{ 'icon-[mdi--lock]': isGoodSearch, 'icon-[mdi--lock-open-remove]': !isGoodSearch }" />
           <p>
             {{ isGoodSearch ? `${$t('demo.searches.search')} ` + `№${goodSearchNumber}` : $t('demo.searches.badSearch') }}
@@ -36,32 +36,32 @@ function selectSearch(searchNumber: number) {
         </div>
         <input class="input w-full sm:max-w-md" type="text" :value="$t('demo.query')">
       </div>
-      <div class="p-2 flex gap-4 flex-col sm:flex-row">
-        <ul class="relative max-w-full sm:max-w-md flex flex-col gap-2 grow">
+      <div class="flex flex-col gap-4 p-2 sm:flex-row">
+        <ul class="relative flex max-w-full grow flex-col gap-2 sm:max-w-md">
           <TransitionGroup name="resultsList">
-            <li v-if="!isGoodSearch" class="rounded bg-red-500/20 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
-              <div class="icon-[mdi--web] self-center text-red" />
+            <li v-if="!isGoodSearch" class="result grid w-full grid-cols-[1.6rem_1fr] gap-y-2 rounded bg-red-500/20 p-2">
+              <div class="icon-[mdi--web] text-red self-center" />
               <p class="m-0">
                 {{ $t('demo.ads.resultAd.title') }}
               </p>
-              <p class="text-sm col-start-2 m-0">
+              <p class="col-start-2 m-0 text-sm">
                 {{ $t('demo.ads.resultAd.description') }}
               </p>
             </li>
-            <li v-for="result in searchResults" :key="result.description" class="rounded bg-gray-500/30 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
+            <li v-for="result in searchResults" :key="result.description" class="result grid w-full grid-cols-[1.6rem_1fr] gap-y-2 rounded bg-gray-500/30 p-2">
               <div class="icon-[mdi--web] self-center" />
               <p class="m-0">
                 {{ result.title }}
               </p>
-              <p class="text-sm col-start-2 m-0">
+              <p class="col-start-2 m-0 text-sm">
                 {{ result.description }}
               </p>
             </li>
           </TransitionGroup>
         </ul>
-        <div class="relative max-h-60 grow max-w-full sm:max-w-xs">
+        <div class="relative max-h-60 max-w-full grow sm:max-w-xs">
           <Transition name="resultsList">
-            <div v-if="!isGoodSearch" class="bg-red-500/20 p-2 w-full h-full rounded flex flex-col gap-y-2 result">
+            <div v-if="!isGoodSearch" class="result flex h-full w-full flex-col gap-y-2 rounded bg-red-500/20 p-2">
               <p class="m-0">
                 {{ $t('demo.ads.bigAd.title') }}
               </p>
@@ -73,11 +73,11 @@ function selectSearch(searchNumber: number) {
         </div>
       </div>
       <div
-        class="absolute right-0 bottom-0 m-5 z-100 flex items-end font-sans gap-4 text-center"
+        class="z-100 absolute bottom-0 right-0 m-5 flex items-end gap-4 text-center font-sans"
       >
         <div
           v-if="buttonsShowed"
-          class="text-gray-800 shadow max-w-80vw h-min flex flex-col gap-1"
+          class="max-w-80vw flex h-min flex-col gap-1 text-gray-800 shadow"
         >
           <button v-for="searchNumber in [1, 2, 3]" :key="searchNumber" class="btn" @click="selectSearch(searchNumber)">
             {{ t('demo.searches.search') }} №{{ searchNumber }}
@@ -87,8 +87,8 @@ function selectSearch(searchNumber: number) {
           class="btn icon-button "
           @click="buttonsShowed = !buttonsShowed"
         >
-          <div v-if="!buttonsShowed" class="icon-[mdi--eye] block m-auto text-2xl" />
-          <div v-else class="icon-[mdi--eye-off] block m-auto text-2xl" />
+          <div v-if="!buttonsShowed" class="icon-[mdi--eye] m-auto block text-2xl" />
+          <div v-else class="icon-[mdi--eye-off] m-auto block text-2xl" />
         </button>
       </div>
     </div>
