@@ -27,9 +27,9 @@ function selectSearch(searchNumber: number) {
 <template>
   <BrowserMockup class="m-auto w-full">
     <div class="h-full text-start" :class="{ goodSearch: isGoodSearch }">
-      <div class="bg-gray/10 border-b border-gray/20 flex flex-col md:flex-row items-center gap-4 p-2">
-        <div class="text-red flex items-center gap-2 logo">
-          <div class="text-10" :class="{ 'i-mdi-lock': isGoodSearch, 'i-mdi-lock-open-remove': !isGoodSearch }" />
+      <div class="bg-gray-500/10 border-b border-gray-500/20 flex flex-col md:flex-row items-center gap-4 p-2">
+        <div class="text-red-500 flex items-center gap-2 logo">
+          <div class="text-5xl" :class="{ 'icon-[mdi--lock]': isGoodSearch, 'icon-[mdi--lock-open-remove]': !isGoodSearch }" />
           <p>
             {{ isGoodSearch ? `${$t('demo.searches.search')} ` + `№${goodSearchNumber}` : $t('demo.searches.badSearch') }}
           </p>
@@ -39,33 +39,33 @@ function selectSearch(searchNumber: number) {
       <div class="p-2 flex gap-4 flex-col sm:flex-row">
         <ul class="relative max-w-full sm:max-w-md flex flex-col gap-2 grow">
           <TransitionGroup name="resultsList">
-            <li v-if="!isGoodSearch" class="rounded bg-red/20 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
-              <div class="i-mdi-web text-4 self-center text-red" />
+            <li v-if="!isGoodSearch" class="rounded bg-red-500/20 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
+              <div class="icon-[mdi--web] self-center text-red" />
               <p class="m-0">
                 {{ $t('demo.ads.resultAd.title') }}
               </p>
-              <p class="text-3 col-start-2 m-0">
+              <p class="text-sm col-start-2 m-0">
                 {{ $t('demo.ads.resultAd.description') }}
               </p>
             </li>
-            <li v-for="result in searchResults" :key="result.description" class="rounded bg-gray/30 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
-              <div class="i-mdi-web text-4 self-center" />
+            <li v-for="result in searchResults" :key="result.description" class="rounded bg-gray-500/30 p-2 grid grid-cols-[1.6rem_1fr] gap-y-2 w-full result">
+              <div class="icon-[mdi--web] self-center" />
               <p class="m-0">
                 {{ result.title }}
               </p>
-              <p class="text-3 col-start-2 m-0">
+              <p class="text-sm col-start-2 m-0">
                 {{ result.description }}
               </p>
             </li>
           </TransitionGroup>
         </ul>
-        <div class="relative max-h-60 grow max-w-full sm:max-w-64">
+        <div class="relative max-h-60 grow max-w-full sm:max-w-xs">
           <Transition name="resultsList">
-            <div v-if="!isGoodSearch" class="bg-red/20 p-2 w-full h-full rounded flex flex-col gap-y-2 result">
+            <div v-if="!isGoodSearch" class="bg-red-500/20 p-2 w-full h-full rounded flex flex-col gap-y-2 result">
               <p class="m-0">
                 {{ $t('demo.ads.bigAd.title') }}
               </p>
-              <p class="m-0 text-3">
+              <p class="m-0 text-sm">
                 {{ $t('demo.ads.bigAd.description') }}
               </p>
             </div>
@@ -83,13 +83,13 @@ function selectSearch(searchNumber: number) {
             {{ t('demo.searches.search') }} №{{ searchNumber }}
           </button>
         </div>
-        <div
-          class="flex w-10 h-10 rounded-full shadow cursor-pointer btn p-1"
+        <button
+          class="btn icon-button "
           @click="buttonsShowed = !buttonsShowed"
         >
-          <div v-if="!buttonsShowed" class="i-mdi-eye block m-auto text-lg" />
-          <div v-else class="i-mdi-eye-off block m-auto text-lg" />
-        </div>
+          <div v-if="!buttonsShowed" class="icon-[mdi--eye] block m-auto text-2xl" />
+          <div v-else class="icon-[mdi--eye-off] block m-auto text-2xl" />
+        </button>
       </div>
     </div>
   </BrowserMockup>
@@ -97,18 +97,18 @@ function selectSearch(searchNumber: number) {
 
 <style scoped>
 .goodSearch .logo {
-  @apply text-green-5;
+  @apply text-green-500;
 }
 
 .result {
-  @apply transition-all transition-300;
+  @apply transition-all duration-[0.4s] ease-out;
 }
 
 .resultsList-leave-to {
-  @apply animate-fade-out-up animate-duration-300;
+  @apply animate-fade-down animate-once animate-duration-[0.2s] animate-ease-out animate-reverse;
 }
 
 .resultsList-leave-active {
-  position: absolute;
+  @apply absolute;
 }
 </style>

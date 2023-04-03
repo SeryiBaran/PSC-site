@@ -11,7 +11,5 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BrowserMockup: typeof import('./src/components/BrowserMockup.vue')['default']
     ExtensionDemo: typeof import('./src/components/ExtensionDemo.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
   }
 }

@@ -7,9 +7,9 @@ const localeStore = useLocalStorage('locale', i18n.locale)
 </script>
 
 <template>
-  <div font-sans max-w-5xl mx-auto p-4 text-center flex flex-col gap-4>
-    <header flex items-center justify-center flex-wrap gap-4 my-16>
-      <img src="@/assets/logo.png" alt="logo" h-20 w-20>
+  <div class="font-sans max-w-5xl mx-auto p-4 text-center flex flex-col gap-4">
+    <header class="flex items-center justify-center flex-wrap gap-4 my-16">
+      <img src="@/assets/logo.png" alt="logo" class="h-20 w-20">
       <h1>
         Privacy Search Companion
       </h1>
@@ -54,10 +54,10 @@ const localeStore = useLocalStorage('locale', i18n.locale)
 
       <div class="flex flex-col gap-2">
         <a href="https://addons.mozilla.org/firefox/addon/privacy-companion/" target="_blank" class="btn btn-medium">
-          <span class="i-mdi-firefox" />{{ $t('download.firefox') }}
+          <span class="icon icon-[mdi--firefox]" />{{ $t('download.firefox') }}
         </a>
         <a href="https://github.com/Erghel/Privacy-Search-Companion" target="_blank" class="btn btn-medium">
-          <span class="i-mdi-github" />{{ $t('download.source') }}
+          <span class="icon icon-[mdi--github]" />{{ $t('download.source') }}
         </a>
       </div>
     </main>

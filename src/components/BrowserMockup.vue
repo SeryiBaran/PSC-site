@@ -1,6 +1,6 @@
 <template>
-  <div class="shadow-md rounded-2 overflow-hidden max-w-4xl flex flex-col min-h-xl">
-    <div class="bg-gray-500 min-h-8 flex px-2 items-center gap-2">
+  <div class="shadow-md rounded-lg overflow-hidden max-w-4xl flex flex-col min-h-288">
+    <div class="bg-gray-500 h-8 flex px-2 items-center gap-2">
       <button class="mockup-btn bg-red-500" />
       <button class="mockup-btn bg-green-500" />
       <button class="mockup-btn bg-yellow-500" />

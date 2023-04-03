@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import UnoCSS from 'unocss/vite'
+import webfontDownload from 'vite-plugin-webfont-dl'
 
 export default defineConfig({
   base: './',
@@ -35,8 +35,6 @@ export default defineConfig({
       dts: true,
     }),
 
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    UnoCSS(),
+    webfontDownload(),
   ],
 })
