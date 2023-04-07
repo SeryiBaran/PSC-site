@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy project to GitHub Pages
+name: Test project
 
 on: [push, pull_request]
 
