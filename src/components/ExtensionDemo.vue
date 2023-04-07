@@ -41,7 +41,7 @@ function selectSearch(searchNumber: number) {
       <div class="flex flex-col gap-4 p-2 sm:flex-row">
         <ul class="relative flex max-w-full grow flex-col gap-2 sm:max-w-md">
           <TransitionGroup name="resultsList">
-            <li v-if="!isGoodSearch" class="result grid w-full grid-cols-[1.6rem_1fr] gap-y-2 rounded bg-red-500/20 p-2">
+            <li v-if="!isGoodSearch" class="ad result grid w-full grid-cols-[1.6rem_1fr] gap-y-2 rounded bg-red-500/20 p-2">
               <div class="icon-[mdi--web] text-red self-center" />
               <p class="m-0">
                 {{ $t('demo.ads.resultAd.title') }}
@@ -63,7 +63,7 @@ function selectSearch(searchNumber: number) {
         </ul>
         <div class="relative max-h-60 max-w-full grow sm:max-w-xs">
           <Transition name="resultsList">
-            <div v-if="!isGoodSearch" class="result flex h-full w-full flex-col gap-y-2 rounded bg-red-500/20 p-2">
+            <div v-if="!isGoodSearch" class="ad result flex h-full w-full flex-col gap-y-2 rounded bg-red-500/20 p-2">
               <p class="m-0">
                 {{ $t('demo.ads.bigAd.title') }}
               </p>
@@ -81,7 +81,7 @@ function selectSearch(searchNumber: number) {
           v-if="buttonsShowed"
           class="max-w-80vw flex h-min flex-col gap-1 text-gray-800 shadow"
         >
-          <button v-for="searchNumber in [1, 2, 3]" :key="searchNumber" class="btn" @click="selectSearch(searchNumber)">
+          <button v-for="searchNumber in [1, 2, 3]" :key="searchNumber" class="btn search-btn" @click="selectSearch(searchNumber)">
             {{ t('demo.searches.search') }} №{{ searchNumber }}
           </button>
         </div>

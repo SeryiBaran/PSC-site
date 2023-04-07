@@ -16,7 +16,7 @@ const localeStore = useLocalStorage('locale', i18n.locale)
         Privacy Search Companion
       </h1>
 
-      <select v-model="localeStore" class="text-gray-800">
+      <select v-model="localeStore" class="locale-select text-gray-800">
         <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">
           {{ locale }}
         </option>
@@ -24,7 +24,7 @@ const localeStore = useLocalStorage('locale', i18n.locale)
     </header>
     <main class="flex flex-col items-center gap-4">
       <section>
-        <p>
+        <p id="about-whatIsIt">
           {{ $t("about.whatIsIt") }}
         </p>
         <p>

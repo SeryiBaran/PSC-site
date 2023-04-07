@@ -84,3 +84,10 @@ export const messages = {
     },
   },
 }
+
+export const config = {
+  legacy: false,
+  locale: 'ru',
+  fallbackLocale: 'en',
+  messages,
+}
