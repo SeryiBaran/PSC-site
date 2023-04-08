@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
-import { config } from './i18n'
+import { config } from './locales/i18n'
 import App from './App.vue'
 
 import '@fontsource/open-sans/300.css'
