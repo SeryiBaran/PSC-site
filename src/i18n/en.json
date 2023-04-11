@@ -29,14 +29,14 @@
         "title": "Big add title",
         "description": "All you need is a simple Soviet... Soviet... is in every house... read more..."
       }
-    },
-    "download": {
-      "heading": "Download",
-      "firefox": "Firefox Addons",
-      "source": "Source code"
-    },
-    "footer": {
-      "developer": "Developer"
     }
+  },
+  "download": {
+    "heading": "Download",
+    "firefox": "Firefox Addons",
+    "source": "Source code"
+  },
+  "footer": {
+    "developer": "Developer"
   }
 }
