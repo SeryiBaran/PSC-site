@@ -58,7 +58,7 @@ const localeStore = useLocalStorage('locale', i18n.locale)
         <a href="https://addons.mozilla.org/firefox/addon/privacy-companion/" target="_blank" class="btn btn-medium">
           <span class="icon icon-[mdi--firefox]" />{{ $t('download.firefox') }}
         </a>
-        <a href="https://github.com/Erghel/Privacy-Search-Companion" target="_blank" class="btn btn-medium">
+        <a href="https://github.com/SeryiBaran/Privacy-Search-Companion" target="_blank" class="btn btn-medium">
           <span class="icon icon-[mdi--github]" />{{ $t('download.source') }}
         </a>
       </div>
